@@ -37,7 +37,7 @@ app.use('/api/book', postRoute)
 const port = process.env.PORT || 8000;
 
 // Connect to MongoDB
-mongoose.connect(mongo_url, (err) => {
+mongoose.connect(process.env.mongo_url, (err) => {
   if (err) {
     console.log(err.message)
   } else {
